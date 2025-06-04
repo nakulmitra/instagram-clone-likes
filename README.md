@@ -27,7 +27,7 @@ Built to handle high-concurrency scenarios using asynchronous Redis counters and
 User Clicks "Like" on Post
              |
              V
-Like count stored in Redis (post\:like:{postId})
+Like count stored in Redis (post:like:{postId})
              |
              V      
 Batch Aggregator (runs every 30s)
