@@ -22,7 +22,6 @@ public class LikeAggregator {
 
 	@Scheduled(fixedRate = 30000)
 	public void aggregateLike() {
-		System.out.println("Executing aggregateLike() method");
 		Set<String> keys = redisTemplate.keys("post:like:*");
 		if (null == keys) {
 			return;
@@ -34,7 +33,6 @@ public class LikeAggregator {
 			Long count = likeCountStr != null ? Long.valueOf(likeCountStr) : 0;
 
 			if (count > 0) {
-				System.out.println("Calling dao to update the like count for postId: " + postId);
 				repo.findById(postId).ifPresent(post -> {
 					post.setLikeCount(post.getLikeCount() + count);
 					repo.save(post);
@@ -42,8 +40,6 @@ public class LikeAggregator {
 				});
 			}
 		}
-		
-		System.out.println("endeded aggregateLike() method");
 	}
 
 }
