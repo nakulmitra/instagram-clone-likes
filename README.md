@@ -85,6 +85,11 @@ post:like:102 -> 8
 
 These are incremented in real time and flushed to the database every 30 seconds.
 
+## Watch the Full Tutorial on YouTube
+
+- [How Instagram Handles 1 Lakh Likes in 1 Minute | Redis Bulk Update System Design](https://youtu.be/ChyRAH-0xGE)
+- [Detailed Notes](https://github.com/nakulmitra/java-tutorial/blob/master/project/instagram-clone-likes.md)
+
 ## Future Improvements
 
 * Prevent duplicate likes per user using Redis Sets
@@ -92,7 +97,7 @@ These are incremented in real time and flushed to the database every 30 seconds.
 * Track like timestamps for analytics
 * Add unlike/dislike support
 
-## 💡 Author
+## Author
 
 **Dev Portal**
 Follow for more backend-focused tutorials and projects.
